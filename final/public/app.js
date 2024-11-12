@@ -32,12 +32,14 @@ const pageTitle = document.querySelector(".page-title");
 const loggedInContent = document.getElementById("logged-in-content");
 const loginButton = document.getElementById("login-button");
 const logoutButton = document.getElementById("logout-button");
+const emailInput = document.getElementById("login-email");
+const passwordInput = document.getElementById("login-password");
 
 //Implement register feature
 signupButton.addEventListener("click", (event) => {
   event.preventDefault();
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
+  const email = emailInput.value;
+  const password = passwordInput.value;
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed up
@@ -60,8 +62,8 @@ signupButton.addEventListener("click", (event) => {
 // Implement regular login
 loginButton.addEventListener("click", (event) => {
   event.preventDefault();
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
+  const email = emailInput.value;
+  const password = passwordInput.value;
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in
@@ -105,6 +107,8 @@ function updateUI(user) {
     loginForm.classList.remove("hidden");
     loggedInContent.classList.add("hidden");
     pageTitle.textContent = "Authentication Demo";
+    emailInput.value = "";
+    passwordInput.value = "";
   }
 }
 
@@ -116,11 +120,8 @@ auth.onAuthStateChanged((user) => {
 // Implement logout feature
 logoutButton.addEventListener("click", () => {
   auth.signOut().then(() => {
-    // updateUI(null);
-    document.getElementById("login-email").value = "";
-    document.getElementById("login-password").value = "";
+    setTimeout(() => {
+      alert("You have been signed out.");
+    }, 500);
   });
-  setTimeout(() => {
-    alert("You have been signed out.");
-  }, 500);
 });
