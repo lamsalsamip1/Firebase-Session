@@ -1,12 +1,8 @@
-/*
-Ex: Make the necessary import to initialize the firebase app
----------------YOUR CODE HERE----------------------- 
-*/
+//Ex: Make the necessary import to initialize the firebase app
+// ---------------YOUR CODE HERE-----------------------
 
-/*
-Ex: Make imports of other services you require from firebase
----------------YOUR CODE HERE----------------------- 
-*/
+//Ex: Make imports of other services you require from firebase
+//---------------YOUR CODE HERE-----------------------
 
 // Ex: Paste your firebase configuration here and initialize the app.
 const firebaseConfig = {};
@@ -15,9 +11,8 @@ const firebaseConfig = {};
 ---------------YOUR CODE HERE----------------------- 
 */
 
-/* Ex: Initialize Firebase Auth Service, and any auth providers you need
----------------YOUR CODE HERE----------------------- 
-*/
+//Ex: Initialize Firebase Auth Service, and any auth providers you need
+//---------------YOUR CODE HERE-----------------------
 
 // Code to read buttons and forms
 const signupButton = document.getElementById("signup-button");
@@ -36,12 +31,9 @@ signupButton.addEventListener("click", (event) => {
   const email = emailInput.value;
   const password = passwordInput.value;
 
-  /*
-  Ex: Call the Firebase API to sign up a new user
+  //Ex: Call the Firebase API to sign up a new user
 
-  ---------------YOUR CODE HERE----------------------- 
-
-  */
+  //---------------YOUR CODE HERE-----------------------
 });
 
 // Implement login via email and password feature
@@ -50,18 +42,15 @@ loginButton.addEventListener("click", (event) => {
   const email = emailInput.value;
   const password = passwordInput.value;
 
-  /*
-  Ex: Call the Firebase API to sign in a user with email and password
-    ---------------YOUR CODE HERE----------------------- 
-  */
+  //Ex: Call the Firebase API to sign in a user with email and password
+
+  //---------------YOUR CODE HERE-----------------------
 });
 
 //Implement login with google feature
 googleButton.addEventListener("click", () => {
-  /*
-  Ex: Call the Firebase API to sign in with Google
-  ---------------YOUR CODE HERE----------------------- 
-  */
+  //Ex: Call the Firebase API to sign in with Google
+  //---------------YOUR CODE HERE-----------------------
 });
 
 // Update UI based on user status
@@ -88,10 +77,8 @@ auth.onAuthStateChanged((user) => {
 
 // Implement logout feature
 logoutButton.addEventListener("click", () => {
-  /*
-  Ex: Call the sign out method on the auth object to log the user out
-  ---------------YOUR CODE HERE----------------------- 
-  */
+  //Ex: Call the sign out method on the auth object to log the user out
+  //---------------YOUR CODE HERE-----------------------
   // setTimeout(() => {
   //   alert("You have been signed out.");
   // }, 500);
